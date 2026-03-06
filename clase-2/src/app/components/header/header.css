@@ -1,0 +1,23 @@
+header {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+header img {
+  width: 50px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="enviar()">
+  <input type="text" formControlName="nombre" />
+
+  @if (form.get('nombre')?.invalid && form.get('nombre')?.touched) {
+    <p>Nombre obligatorio</p>
+  }
+
+  <input type="email" formControlName="email" />
+
+  @if (form.get('email')?.invalid && form.get('email')?.touched) {
+    <p>Email invalido</p>
+  }
+
+  <input type="number" formControlName="edad" />
+  @if (form.get('edad')?.invalid && form.get('edad')?.touched) {
+    <p>La edad debe ser mayor a 18</p>
+  }
+
+  <button type="submit">Enviar</button>
+</form>
+
+<ul>
+  @for (usuario of usuarios; track usuario.email) {
+    <li>{{ usuario.email }}</li>
+  }
+</ul>
