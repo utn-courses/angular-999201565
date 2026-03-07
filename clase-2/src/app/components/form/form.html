@@ -1,19 +1,19 @@
 <form [formGroup]="form" (ngSubmit)="enviar()">
-  <input type="text" formControlName="nombre" />
+  <input type="text" formControlName="username" />
 
-  @if (form.get('nombre')?.invalid && form.get('nombre')?.touched) {
-    <p>Nombre obligatorio</p>
+  @if (form.get('username')?.invalid && form.get('username')?.touched) {
+  <p>Nombre obligatorio</p>
   }
 
   <input type="email" formControlName="email" />
 
   @if (form.get('email')?.invalid && form.get('email')?.touched) {
-    <p>Email invalido</p>
+  <p>Email invalido</p>
   }
 
-  <input type="number" formControlName="edad" />
-  @if (form.get('edad')?.invalid && form.get('edad')?.touched) {
-    <p>La edad debe ser mayor a 18</p>
+  <input type="password" formControlName="password" />
+  @if (form.get('password')?.invalid && form.get('password')?.touched) {
+  <p>La edad debe ser mayor a 18</p>
   }
 
   <button type="submit">Enviar</button>
@@ -21,6 +21,6 @@
 
 <ul>
   @for (usuario of usuarios; track usuario.email) {
-    <li>{{ usuario.email }}</li>
+  <li>{{ usuario.email }}</li>
   }
 </ul>
